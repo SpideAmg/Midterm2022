@@ -1,8 +1,12 @@
 package datastructure;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class DataReader {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		/*
 		 * User API to read the below textFile and print to console.
 		 * Use BufferedReader class. 
@@ -18,10 +22,16 @@ public class DataReader {
 		 * Use For Each loop/while loop/Iterator to retrieve data.
 		 */
 
-		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+		//String textFile = System.getProperty("/Users/HP/Desktop/midterm-coding-exam/src/data/self-driving-car");
 
 
+				File file = new File("/Users/HP/Desktop/midterm-coding-exam/src/data/self-driving-car");
+				Scanner scan = new Scanner(file);
+				while(scan.hasNextLine())
+					System.out.println(scan.nextLine());
 
-	}
+			}
 
-}
+		}
+
+

@@ -8,8 +8,25 @@ public class Pattern {
 		 *
 		 *
 		 */
-		
+		for ( int i=100; i<=100 && i > 90; i-- ) {
+			System.out.print(i + ",");
 
+		}
+		for ( int i=90; i<=90 && i > 70; i-=2 ) {
+			System.out.print(i + ",");
+
+		}
+		for ( int i=70; i<=70 && i > 40; i-=3 ) {
+			System.out.print(i + ",");
+
+		}
+		for ( int i=40; i<=40 && i > 0; i-=4 ) {
+			System.out.print(i + ",");
+
+		}
+		System.out.print("...");
 
 	}
 }
+
+
