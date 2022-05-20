@@ -9,7 +9,6 @@ public class UseArrayList {
 		 * Store all the sorted data into one of the databases.
 		 * 
 		 */
-	
 
 	}
 
