@@ -7,6 +7,7 @@ import java.sql.*;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 public class ConnectToSqlDB {
@@ -157,7 +158,8 @@ public class ConnectToSqlDB {
         User user = null;
         try{
             Connection conn = connectToSqlDatabase();
-            String query = "SELECT * FROM Students";
+           //String query = "SELECT * FROM Students ;";
+            String query = "SELECT * FROM `student`.`student`;";
             // create the java statement
             Statement st = conn.createStatement();
             // execute the query, and get a java resultset
@@ -182,15 +184,20 @@ public class ConnectToSqlDB {
     }
 
     public static void main(String[] args) throws Exception {
-//        List<User> list = readUserProfileFromSqlTable();
-//        for(User user:list){
-//            System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
-//        }
-//        ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
-//        List<String> students = connectToSqlDB.readDataBase("student", "name");
-//        for (String student: students){
-//            System.out.println(student);
-//        }
+       List<User> list = readUserProfileFromSqlTable();
+        for(User user:list){
+            System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
+        }
+        ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
+        List<String> students = connectToSqlDB.readDataBase("student", "name");
+        for (String student: students){
+            System.out.println(student);
+        }
+
+
+    }
+
+    public void insertDataFromMapToSqlTable(Map<String, List<String>> archive, String map, String id, String map_words) {
 
 
     }
