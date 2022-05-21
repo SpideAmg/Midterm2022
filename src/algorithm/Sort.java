@@ -54,7 +54,7 @@ public class Sort {
     }
     
 
-    public int [] mergeSort(int [] array){
+    public int [] mergeSort(int[] array, int i){
         int [] list = array;
         //implement here
         
@@ -105,5 +105,8 @@ public class Sort {
         for(int i=0; i<array.length; i++){
             System.out.println(array[i]);
         }
+    }
+
+    public void quickSort(int[] num, int i, int i1) {
     }
 }
